@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Oasis Fit for membership inquiries, class bookings, or facility tours. We're here to help you start your fitness journey.">
+    <title>Contact Oasis Fit — Book Your Fitness Journey Today</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" href="assets/img/contact/contact-hero-1200.webp" as="image">
+</head>
+<body>
+    <div class="loader" id="pageLoader" aria-hidden="true">
+        <div class="spinner" aria-label="Loading"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Oasis Fit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <header class="py-5 text-center bg-light" role="banner">
+            <div class="container">
+                <h1 class="text-primary fw-bold" data-aos="fade-down">Start Your Fitness Journey</h1>
+                <p class="lead mb-4" data-aos="fade-down" data-aos-delay="100">Book a tour, ask questions, or join today</p>
+                <div class="row g-4 justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-3 col-6">
+                        <div class="text-center">
+                            <div class="feature-icon mx-auto mb-2">📞</div>
+                            <small class="d-block">Call Us</small>
+                            <strong class="text-primary">(555) 123-4567</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="text-center">
+                            <div class="feature-icon mx-auto mb-2">✉️</div>
+                            <small class="d-block">Email Us</small>
+                            <strong class="text-primary">hello@oasisfit.com</strong>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="text-center">
+                            <div class="feature-icon mx-auto mb-2">🕒</div>
+                            <small class="d-block">Open Hours</small>
+                            <strong class="text-primary">5AM - 11PM</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="container my-5">
+            <div class="row g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card card-ghost p-4 h-100">
+                        <h2 class="text-primary mb-4">Book Your Session</h2>
+                        <form id="bookingForm" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" required>
+                                    <div class="invalid-feedback">Please provide your first name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" required>
+                                    <div class="invalid-feedback">Please provide your last name.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please provide a valid email address.</div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone" placeholder="(555) 123-4567">
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="service" class="form-label">Service Interested In *</label>
+                                <select class="form-select" id="service" required>
+                                    <option value="">Choose a service...</option>
+                                    <option value="gym">Gym Membership</option>
+                                    <option value="yoga">Yoga Classes</option>
+                                    <option value="training">Personal Training</option>
+                                    <option value="spa">Spa Services</option>
+                                    <option value="tour">Facility Tour</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a service.</div>
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="date" class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control" id="date" min="">
+                            </div>
+                            
+                            <div class="mt-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your fitness goals or any special requests..."></textarea>
+                            </div>
+                            
+                            <div class="mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label small" for="newsletter">
+                                        Send me updates about new classes and promotions
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="d-grid mt-4">
+                                <button type="submit" class="btn btn-success btn-lg py-3">
+                                    <span class="submit-text">Send Booking Request</span>
+                                    <span class="loading-text d-none">
+                                        <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+                                        Processing...
+                                    </span>
+                                </button>
+                            </div>
+                            
+                            <div id="formMsg" class="alert mt-3 d-none" role="alert" aria-live="polite"></div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card card-ghost p-4 h-100">
+                        <h2 class="text-primary mb-4">Visit Our Location</h2>
+                        
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="feature-icon me-3">📍</span>
+                                <div>
+                                    <strong>Oasis Fit Wellness Center</strong><br>
+                                    123 Fitness Street<br>
+                                    Wellness District, Alexandria 12345
+                                </div>
+                            </div>
+                            
+                            <div class="ratio ratio-16x9 mb-4 rounded">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3412.321234567890!2d29.918879!3d31.205753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDEyJzIwLjciTiAyOcKwNTUnMDguMCJF!5e0!3m2!1sen!2seg!4v1234567890" 
+                                    style="border:0; border-radius: 12px;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade"
+                                    title="Oasis Fit Location Map">
+                                </iframe>
+                            </div>
+                        </div>
+
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <div class="card card-ghost p-3 text-center">
+                                    <div class="feature-icon mx-auto mb-2 small">🚗</div>
+                                    <strong>Free Parking</strong>
+                                    <small class="d-block text-muted">50+ spaces available</small>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card card-ghost p-3 text-center">
+                                    <div class="feature-icon mx-auto mb-2 small">🚌</div>
+                                    <strong>Bus Access</strong>
+                                    <small class="d-block text-muted">Routes 15, 22, 34</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="h5 text-primary mb-3">Frequently Asked Questions</h3>
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item border-0 mb-2">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed card-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        What are your opening hours?
+                                    </button>
+                                </h4>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <strong>Monday - Friday:</strong> 5:00 AM - 11:00 PM<br>
+                                        <strong>Saturday:</strong> 6:00 AM - 10:00 PM<br>
+                                        <strong>Sunday:</strong> 7:00 AM - 9:00 PM
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item border-0 mb-2">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed card-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Do you offer trial sessions?
+                                    </button>
+                                </h4>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Yes! We offer one complimentary trial session for new members. 
+                                        Contact us to schedule your free session and tour of our facilities.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item border-0 mb-2">
+                                <h4 class="accordion-header">
+                                    <button class="accordion-button collapsed card-ghost" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        What should I bring for my first visit?
+                                    </button>
+                                </h4>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Comfortable workout clothes, athletic shoes, a water bottle, and a towel. 
+                                        We provide lockers, but bring your own lock if desired.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 bg-success text-white">
+            <div class="container text-center">
+                <h2 class="mb-3" data-aos="fade-up">Ready to Transform Your Life?</h2>
+                <p class="mb-4 lead" data-aos="fade-up" data-aos-delay="100">Join hundreds of members who've found their fitness home at Oasis Fit</p>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="pricing.html" class="btn btn-light btn-lg px-4">View Membership Plans</a>
+                    <a href="tel:5551234567" class="btn btn-outline-light btn-lg px-4">Call Now: (555) 123-4567</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center py-3">
+            <small>&copy; 2025 Oasis Fit. All rights reserved.</small>
+            <div class="mt-2 mt-md-0">
+                <a href="privacy.html" class="text-white me-3 text-decoration-none">Privacy Policy</a>
+                <a href="terms.html" class="text-white text-decoration-none">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
